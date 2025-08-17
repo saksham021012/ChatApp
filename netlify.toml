@@ -1,4 +1,0 @@
-[[redirects]]
-  from = "/api/*"
-  to = "https://n8n-chatbot-xpb4.onrender.com/:splat"
-  status = 200
