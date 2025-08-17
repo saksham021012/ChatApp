@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/webhook-test/*"
+  to = "https://n8n-chatbot-xpb4.onrender.com/webhook/:splat"
+  status = 200
+  force = true
