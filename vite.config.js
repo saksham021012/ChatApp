@@ -10,19 +10,18 @@ const __dirname = path.dirname(__filename);
 export default defineConfig({
   plugins: [react()],
   server: {
-  proxy: {
-    '/webhook-test': {
-      target: 'https://n8n-chatbot-xpb4.onrender.com/',
-      changeOrigin: true,
-      secure: false,
-      rewrite: (path) => path.replace(/^\/webhook-test/, '/webhook'),
+    proxy: {
+      '/api': {  // Changed from '/webhook-test' to '/api'
+        target: 'https://n8n-chatbot-xpb4.onrender.com/',
+        changeOrigin: true,
+        secure: true,
+        rewrite: (path) => path.replace(/^\/api/, ''), // Remove /api prefix
+      },
     },
   },
-},
-
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'), // maps "@" to "src/"
+      '@': path.resolve(__dirname, './src'),
     },
   },
 });
