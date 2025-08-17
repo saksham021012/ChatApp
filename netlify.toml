@@ -3,3 +3,7 @@
   to = "https://n8n-chatbot-xpb4.onrender.com/webhook/:splat"
   status = 200
   force = true
+
+[build]
+  publish = "dist"
+  command = "npm run build"
