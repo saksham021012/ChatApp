@@ -43,7 +43,7 @@ const ChatInput = ({ chatId }) => {
         resetInput();
 
         try {
-            const response = await fetch("/webhook-test/sendMessage", {
+            const response = await fetch('/api/webhook-test/sendMessage', {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
