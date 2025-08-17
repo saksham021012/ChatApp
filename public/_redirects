@@ -1,1 +1,2 @@
 /webhook-test/* https://n8n-chatbot-xpb4.onrender.com/webhook/:splat 200
+/*    /index.html   200
